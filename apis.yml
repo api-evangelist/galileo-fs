@@ -1,0 +1,29 @@
+aid: galileo-fs
+url: https://raw.githubusercontent.com/api-evangelist/galileo-fs/refs/heads/main/apis.yml
+name: Galileo Financial Technologies
+x-type: company
+description: >-
+  Galileo Financial Technologies (a SoFi company) is a payments processing and card issuing platform powering many neobanks and fintechs with account, card, and payments APIs.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Fintech
+  - BaaS
+  - Card Issuing
+  - Processor
+  - SoFi
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.galileo-ft.com/
+  - type: Plans
+    url: plans/galileo-fs-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/galileo-fs-rate-limits.yml
+  - type: FinOps
+    url: finops/galileo-fs-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
