@@ -5,37 +5,63 @@ provider: Galileo Financial Technologies
 providerId: galileo-fs
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Fintech
+- FinTech
 - BaaS
 - Card Issuing
-- Processor
-- SoFi
+- Banking
+- Payments
+- ACH
 - Plans
-description: Placeholder plans/pricing artifact for Galileo Financial Technologies. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+description: Galileo is an enterprise platform sold under custom contracts. There
+  is no self-serve sandbox without sponsor agreement.
+notes: Pricing is bespoke per program; minimums and per-transaction fees are negotiated
+  with the sponsor bank in scope.
 sources:
 - https://www.galileo-ft.com/
+- https://docs.galileo-ft.com/
 plans:
-- id: galileo-fs-default
-  name: To Be Reconciled
+- id: galileo-program
+  name: Program (Custom)
   type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+  description: Custom enterprise contract with sponsor bank.
   entries:
-  - label: API Access
-    name: api_access
+  - label: Platform Fee
+    name: platform_fee
     type: flat
-    metric: varies
+    metric: subscription
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: negotiated
+    userMultiplied: false
+  - label: Per Transaction
+    name: txn_fee
+    type: metered
+    metric: transaction
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://www.galileo-ft.com/
+    price: negotiated
+    userMultiplied: false
+  - label: Per Card
+    name: card_fee
+    type: metered
+    metric: card
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: negotiated
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Sponsor Bank
+  - name: Production APIs
+  - name: PCI
+  - name: SoFi-network
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

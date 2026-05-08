@@ -5,18 +5,19 @@ provider: Galileo Financial Technologies
 providerId: galileo-fs
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Fintech
+- FinTech
 - BaaS
 - Card Issuing
-- Processor
-- SoFi
+- Banking
+- Payments
+- ACH
 - FinOps
-- Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Galileo Financial Technologies. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: 'Galileo bills under bespoke contracts: monthly platform fees, per-transaction,
+  per-card, ACH/RTP, plus interchange/interest economics shared with the sponsor bank.'
+notes: Invoiced via Galileo (SoFi).
 sources:
 - https://www.galileo-ft.com/
 - https://focus.finops.org/focus-specification/v1-3/
@@ -26,10 +27,10 @@ alignedWith:
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-publisherName: Galileo Financial Technologies
-serviceCategory: Fintech
+publisherName: Galileo Financial Technologies, LLC (a SoFi company)
+serviceCategory: FinTech
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription + Usage
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
@@ -37,30 +38,52 @@ billingModel:
   - Purchase
   - Adjustment
 focusColumns:
-  ServiceName: Galileo Financial Technologies
-  ServiceCategory: Fintech
-  ProviderName: Galileo Financial Technologies
-  PublisherName: Galileo Financial Technologies
-  InvoiceIssuerName: Galileo Financial Technologies
+  ServiceName: Galileo
+  ServiceCategory: BaaS
+  ProviderName: Galileo
+  PublisherName: Galileo
+  InvoiceIssuerName: Galileo
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: transactions
+  description: Card and account transactions processed.
+  unit: transaction
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - program
+  - card_product
+- name: active_cards
+  description: Active cards.
+  unit: card
+  aggregation: max
+  dimensions:
+  - program
+  - card_product
+- name: ach_rtp_transfers
+  description: ACH and RTP transfers.
+  unit: transfer
+  aggregation: sum
+  dimensions:
+  - program
+  - rail
+- name: loan_drawdowns
+  description: Loan/credit draws.
+  unit: draw
+  aggregation: sum
+  dimensions:
+  - program
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Pull Galileo reporting endpoints; use Events API for streaming attribution.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Tag accounts/cards per business unit; one program per cost center where
+    possible.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Use Auth API rules to lower fraud declines; right-size card products;
+    choose RTP over ACH for time-sensitive flows.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Program owners review monthly contract minimums vs activity.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
