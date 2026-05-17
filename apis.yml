@@ -1,7 +1,7 @@
 aid: galileo-fs
 url: https://raw.githubusercontent.com/api-evangelist/galileo-fs/refs/heads/main/apis.yml
 name: Galileo Financial Technologies
-x-type: company
+kind: company
 description: Galileo Financial Technologies (a SoFi company) is a card-issuing and
   banking platform powering many fintechs. Provides Program API (accounts, cards),
   Config API, Dispute API 3.0, Loan API, Payment Hub API, Risk API, Auth API (authorization
