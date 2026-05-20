@@ -8,133 +8,135 @@ description: Galileo Financial Technologies (a SoFi company) is a card-issuing a
   controller webhook), Events API webhooks, and External Transactions API.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- FinTech
-- BaaS
-- Card Issuing
-- Banking
-- Payments
-- ACH
+  - FinTech
+  - BaaS
+  - Card Issuing
+  - Banking
+  - Payments
+  - ACH
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-- aid: galileo:program-api
-  name: Galileo Program API
-  description: 'REST API for managing accounts and cards: account creation, KYC/CIP
-    verification, balance/funding, card issuance (physical, digital, virtual, instant-issue),
-    authorization controls.'
-  humanURL: https://docs.galileo-ft.com/pro/
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - Card Issuing
-  - Banking
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/
-- aid: galileo:config-api
-  name: Galileo Config API
-  description: REST API for program configuration including card products, fee schedules,
-    MCC controls, and program parameters.
-  humanURL: https://docs.galileo-ft.com/pro/reference/config-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - Configuration
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/config-api
-- aid: galileo:dispute-api
-  name: Galileo Dispute API 3.0
-  description: REST API for the dispute lifecycle (chargebacks, representments, network
-    communications).
-  humanURL: https://docs.galileo-ft.com/pro/reference/dispute-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - Disputes
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/dispute-api
-- aid: galileo:loan-api
-  name: Galileo Loan API
-  description: REST API for credit, lending, BNPL, and secured-credit products including
-    draw, repayment, and balance inquiry.
-  humanURL: https://docs.galileo-ft.com/pro/reference/loan-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - Lending
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/loan-api
-- aid: galileo:payment-hub-api
-  name: Galileo Payment Hub API
-  description: REST API for ACH, RTP, Bill Pay, and other payments rails.
-  humanURL: https://docs.galileo-ft.com/pro/reference/payment-hub-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - Payments
-  - ACH
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/payment-hub-api
-- aid: galileo:risk-api
-  name: Galileo Risk API
-  description: REST API for risk and fraud screening tools.
-  humanURL: https://docs.galileo-ft.com/pro/reference/risk-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - Risk
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/risk-api
-- aid: galileo:auth-api
-  name: Galileo Auth API (Authorization Controller)
-  description: Synchronous webhook-style endpoint customers expose for Galileo to
-    call during authorization for approve/decline decisions.
-  humanURL: https://docs.galileo-ft.com/pro/reference/auth-api
-  baseURL: customer-hosted
-  tags:
-  - Webhooks
-  - Authorization
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/auth-api
-- aid: galileo:events-api
-  name: Galileo Events API
-  description: Outbound webhook delivery for transactions, account events, card events,
-    and other lifecycle events.
-  humanURL: https://docs.galileo-ft.com/pro/reference/events-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - Webhooks
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/events-api
-- aid: galileo:external-transactions-api
-  name: Galileo External Transactions API
-  description: REST API to feed third-party transactions into Galileo program ledgers
-    for unified reporting.
-  humanURL: https://docs.galileo-ft.com/pro/reference/external-transactions-api
-  baseURL: https://api-sandbox.cv.gpsrv.com
-  tags:
-  - REST
-  - External
-  properties:
-  - type: Documentation
-    url: https://docs.galileo-ft.com/pro/reference/external-transactions-api
+  - aid: galileo:program-api
+    name: Galileo Program API
+    description: 'REST API for managing accounts and cards: account creation, KYC/CIP
+      verification, balance/funding, card issuance (physical, digital, virtual, instant-issue),
+      authorization controls.'
+    humanURL: https://docs.galileo-ft.com/pro/
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - Card Issuing
+    - Banking
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/
+  - aid: galileo:config-api
+    name: Galileo Config API
+    description: REST API for program configuration including card products, fee schedules,
+      MCC controls, and program parameters.
+    humanURL: https://docs.galileo-ft.com/pro/reference/config-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - Configuration
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/config-api
+  - aid: galileo:dispute-api
+    name: Galileo Dispute API 3.0
+    description: REST API for the dispute lifecycle (chargebacks, representments, network
+      communications).
+    humanURL: https://docs.galileo-ft.com/pro/reference/dispute-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - Disputes
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/dispute-api
+  - aid: galileo:loan-api
+    name: Galileo Loan API
+    description: REST API for credit, lending, BNPL, and secured-credit products including
+      draw, repayment, and balance inquiry.
+    humanURL: https://docs.galileo-ft.com/pro/reference/loan-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - Lending
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/loan-api
+  - aid: galileo:payment-hub-api
+    name: Galileo Payment Hub API
+    description: REST API for ACH, RTP, Bill Pay, and other payments rails.
+    humanURL: https://docs.galileo-ft.com/pro/reference/payment-hub-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - Payments
+    - ACH
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/payment-hub-api
+  - aid: galileo:risk-api
+    name: Galileo Risk API
+    description: REST API for risk and fraud screening tools.
+    humanURL: https://docs.galileo-ft.com/pro/reference/risk-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - Risk
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/risk-api
+  - aid: galileo:auth-api
+    name: Galileo Auth API (Authorization Controller)
+    description: Synchronous webhook-style endpoint customers expose for Galileo to
+      call during authorization for approve/decline decisions.
+    humanURL: https://docs.galileo-ft.com/pro/reference/auth-api
+    baseURL: customer-hosted
+    tags:
+    - Webhooks
+    - Authorization
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/auth-api
+  - aid: galileo:events-api
+    name: Galileo Events API
+    description: Outbound webhook delivery for transactions, account events, card events,
+      and other lifecycle events.
+    humanURL: https://docs.galileo-ft.com/pro/reference/events-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - Webhooks
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/events-api
+  - aid: galileo:external-transactions-api
+    name: Galileo External Transactions API
+    description: REST API to feed third-party transactions into Galileo program ledgers
+      for unified reporting.
+    humanURL: https://docs.galileo-ft.com/pro/reference/external-transactions-api
+    baseURL: https://api-sandbox.cv.gpsrv.com
+    tags:
+    - REST
+    - External
+    properties:
+    - type: Documentation
+      url: https://docs.galileo-ft.com/pro/reference/external-transactions-api
 common:
-- type: Website
-  url: https://www.galileo-ft.com/
-- type: Plans
-  url: plans/galileo-fs-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/galileo-fs-rate-limits.yml
-- type: FinOps
-  url: finops/galileo-fs-finops.yml
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/galileo-financial-technologies
+  - type: Website
+    url: https://www.galileo-ft.com/
+  - type: Plans
+    url: plans/galileo-fs-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/galileo-fs-rate-limits.yml
+  - type: FinOps
+    url: finops/galileo-fs-finops.yml
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
