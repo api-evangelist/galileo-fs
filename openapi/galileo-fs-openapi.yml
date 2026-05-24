@@ -1,0 +1,287 @@
+openapi: 3.1.0
+info:
+  title: Galileo Financial Technologies Pro API
+  version: "2026-05-23"
+  description: |
+    Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)
+    REST API surface, covering Program (accounts and cards), Config, Dispute 3.0,
+    Loan, Payment Hub, Risk, External Transactions, and the Events webhook.
+    Endpoint detail is intentionally coarse because Galileo publishes its
+    operation-level reference behind reference pages
+    (/pro/reference/post_<functionname>); shapes here describe representative
+    POST resources. Generated from public documentation; not an official spec.
+  contact:
+    name: Galileo Pro Documentation
+    url: https://docs.galileo-ft.com/pro/
+servers:
+  - url: https://api-sandbox.cv.gpsrv.com
+    description: Sandbox
+security:
+  - basicAuth: []
+tags:
+  - name: Program
+  - name: Config
+  - name: Dispute
+  - name: Loan
+  - name: PaymentHub
+  - name: Risk
+  - name: ExternalTransactions
+  - name: Events
+paths:
+  /pro/program/accounts:
+    post:
+      tags: [Program]
+      operationId: createAccount
+      summary: Create a program account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/program/accounts/get:
+    post:
+      tags: [Program]
+      operationId: getAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/program/cards:
+    post:
+      tags: [Program]
+      operationId: createCard
+      summary: Issue a card (physical, virtual, instant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/program/cards/get:
+    post:
+      tags: [Program]
+      operationId: getCard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/program/transactions:
+    post:
+      tags: [Program]
+      operationId: listTransactions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/program/authorization_controls:
+    post:
+      tags: [Program]
+      operationId: setAuthorizationControls
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/config/product:
+    post:
+      tags: [Config]
+      operationId: getProductConfig
+      summary: Retrieve product configuration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/dispute/claims:
+    post:
+      tags: [Dispute]
+      operationId: createDisputeClaim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/dispute/claims/get:
+    post:
+      tags: [Dispute]
+      operationId: getDisputeClaim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/dispute/claims/withdraw:
+    post:
+      tags: [Dispute]
+      operationId: withdrawDisputeClaim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/loan/create:
+    post:
+      tags: [Loan]
+      operationId: createLoan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/loan/simulate:
+    post:
+      tags: [Loan]
+      operationId: simulateLoan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/loan/installments:
+    post:
+      tags: [Loan]
+      operationId: listLoanInstallments
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/payment-hub/external-accounts:
+    post:
+      tags: [PaymentHub]
+      operationId: linkExternalAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/payment-hub/transfers:
+    post:
+      tags: [PaymentHub]
+      operationId: createTransfer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/payment-hub/transfers/cancel:
+    post:
+      tags: [PaymentHub]
+      operationId: cancelTransfer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/risk/screen:
+    post:
+      tags: [Risk]
+      operationId: screenRisk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/external-transactions:
+    post:
+      tags: [ExternalTransactions]
+      operationId: postExternalTransaction
+      summary: Submit a third-party transaction to the program ledger
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+  /pro/events/webhook-subscriptions:
+    post:
+      tags: [Events]
+      operationId: createWebhookSubscription
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/GalileoRequest" }
+      responses:
+        "200": { $ref: "#/components/responses/GalileoOk" }
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: |
+        HTTPS request authenticated with provider ID, username, password, and
+        product ID as documented in the Galileo Pro tenant onboarding guide.
+  schemas:
+    GalileoRequest:
+      type: object
+      description: Galileo Pro form-style request payload. Provider-specific fields apply.
+      additionalProperties: true
+      properties:
+        providerId:
+          type: string
+          description: Galileo provider id
+        username:
+          type: string
+        password:
+          type: string
+        productId:
+          type: string
+        transactionId:
+          type: string
+    GalileoResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        status_code:
+          type: integer
+        status:
+          type: string
+        processing_time:
+          type: number
+        response_data:
+          type: object
+          additionalProperties: true
+  responses:
+    GalileoOk:
+      description: Successful Galileo response
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/GalileoResponse" }
