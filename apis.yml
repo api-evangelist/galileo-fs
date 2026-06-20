@@ -6,7 +6,7 @@ description: Galileo Financial Technologies (a SoFi company) is a card-issuing a
   banking platform powering many fintechs. Provides Program API (accounts, cards),
   Config API, Dispute API 3.0, Loan API, Payment Hub API, Risk API, Auth API (authorization
   controller webhook), Events API webhooks, and External Transactions API.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - FinTech
   - BaaS
