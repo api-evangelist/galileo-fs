@@ -137,7 +137,7 @@ common:
     url: rate-limits/galileo-fs-rate-limits.yml
   - type: FinOps
     url: finops/galileo-fs-finops.yml
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.galileo-ft.com/llms.txt
 maintainers:
   - FN: Kin Lane
