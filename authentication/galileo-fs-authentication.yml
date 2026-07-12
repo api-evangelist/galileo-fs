@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/galileo-fs-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: |-
+    HTTPS request authenticated with provider ID, username, password, and
+    product ID as documented in the Galileo Pro tenant onboarding guide.
+  sources:
+  - openapi/galileo-fs-openapi.yml
