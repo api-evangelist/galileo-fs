@@ -1,0 +1,119 @@
+openapi: 3.1.0
+info:
+  title: Galileo Financial Technologies Pro Config PaymentHub API
+  version: '2026-05-23'
+  description: 'Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)
+
+    REST API surface, covering Program (accounts and cards), Config, Dispute 3.0,
+
+    Loan, Payment Hub, Risk, External Transactions, and the Events webhook.
+
+    Endpoint detail is intentionally coarse because Galileo publishes its
+
+    operation-level reference behind reference pages
+
+    (/pro/reference/post_<functionname>); shapes here describe representative
+
+    POST resources. Generated from public documentation; not an official spec.
+
+    '
+  contact:
+    name: Galileo Pro Documentation
+    url: https://docs.galileo-ft.com/pro/
+servers:
+- url: https://api-sandbox.cv.gpsrv.com
+  description: Sandbox
+security:
+- basicAuth: []
+tags:
+- name: PaymentHub
+paths:
+  /pro/payment-hub/external-accounts:
+    post:
+      tags:
+      - PaymentHub
+      operationId: linkExternalAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GalileoRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/GalileoOk'
+  /pro/payment-hub/transfers:
+    post:
+      tags:
+      - PaymentHub
+      operationId: createTransfer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GalileoRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/GalileoOk'
+  /pro/payment-hub/transfers/cancel:
+    post:
+      tags:
+      - PaymentHub
+      operationId: cancelTransfer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GalileoRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/GalileoOk'
+components:
+  schemas:
+    GalileoRequest:
+      type: object
+      description: Galileo Pro form-style request payload. Provider-specific fields apply.
+      additionalProperties: true
+      properties:
+        providerId:
+          type: string
+          description: Galileo provider id
+        username:
+          type: string
+        password:
+          type: string
+        productId:
+          type: string
+        transactionId:
+          type: string
+    GalileoResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        status_code:
+          type: integer
+        status:
+          type: string
+        processing_time:
+          type: number
+        response_data:
+          type: object
+          additionalProperties: true
+  responses:
+    GalileoOk:
+      description: Successful Galileo response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GalileoResponse'
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: 'HTTPS request authenticated with provider ID, username, password, and
+
+        product ID as documented in the Galileo Pro tenant onboarding guide.
+
+        '
