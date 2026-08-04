@@ -1,0 +1,28 @@
+{
+  "provider": "galileo-fs",
+  "sources": [
+    "galileo-fs-config-api-openapi.yml",
+    "galileo-fs-dispute-api-openapi.yml",
+    "galileo-fs-events-api-openapi.yml",
+    "galileo-fs-externaltransactions-api-openapi.yml",
+    "galileo-fs-loan-api-openapi.yml",
+    "galileo-fs-paymenthub-api-openapi.yml",
+    "galileo-fs-program-api-openapi.yml",
+    "galileo-fs-risk-api-openapi.yml"
+  ],
+  "outputs": [
+    "galileo-fs-config-api-openapi.yml",
+    "galileo-fs-dispute-api-openapi.yml",
+    "galileo-fs-events-api-openapi.yml",
+    "galileo-fs-externaltransactions-api-openapi.yml",
+    "galileo-fs-loan-api-openapi.yml",
+    "galileo-fs-paymenthub-api-openapi.yml",
+    "galileo-fs-program-api-openapi.yml",
+    "galileo-fs-risk-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
