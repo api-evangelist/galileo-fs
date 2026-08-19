@@ -1,0 +1,347 @@
+{
+  "item": [
+    {
+      "id": "d7cea043-15c8-45aa-a658-1dd45107b050",
+      "name": "PaymentHub",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "aeaf5222-dff3-4491-9dfb-64b5526dc8a2",
+          "name": "link External Account",
+          "request": {
+            "name": "link External Account",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "payment-hub",
+                "external-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ec7d8310-b552-4a65-8eea-7509d99d2bcc",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "payment-hub",
+                    "external-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\",\n  \"key_0\": true,\n  \"key_1\": 82\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2274,\n  \"status\": \"string\",\n  \"processing_time\": 9451.174814532824,\n  \"response_data\": {\n    \"key_0\": 5694.21302943499\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bd08eed1-cb85-4f28-9bf9-1ec3014a8c1c",
+          "name": "create Transfer",
+          "request": {
+            "name": "create Transfer",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "payment-hub",
+                "transfers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ae4cf5f5-a554-442f-93f5-b2c7caaaa7b2",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "payment-hub",
+                    "transfers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\",\n  \"key_0\": true,\n  \"key_1\": 82\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2274,\n  \"status\": \"string\",\n  \"processing_time\": 9451.174814532824,\n  \"response_data\": {\n    \"key_0\": 5694.21302943499\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2484a92d-8f22-43df-9113-1669bbc21fa3",
+          "name": "cancel Transfer",
+          "request": {
+            "name": "cancel Transfer",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "payment-hub",
+                "transfers",
+                "cancel"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e4afbc87-ec28-45ab-9920-731a5efd1c57",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "payment-hub",
+                    "transfers",
+                    "cancel"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\",\n  \"key_0\": true,\n  \"key_1\": 82\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2274,\n  \"status\": \"string\",\n  \"processing_time\": 9451.174814532824,\n  \"response_data\": {\n    \"key_0\": 5694.21302943499\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-sandbox.cv.gpsrv.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cc6181a3-9e3e-4bf2-b47f-4e5723bbf63f",
+    "name": "Galileo Financial Technologies Pro Config PaymentHub API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)\nREST API surface, covering Program (accounts and cards), Config, Dispute 3.0,\nLoan, Payment Hub, Risk, External Transactions, and the Events webhook.\nEndpoint detail is intentionally coarse because Galileo publishes its\noperation-level reference behind reference pages\n(/pro/reference/post_<functionname>); shapes here describe representative\nPOST resources. Generated from public documentation; not an official spec.\n\n\nContact Support:\n Name: Galileo Pro Documentation",
+      "type": "text/plain"
+    }
+  }
+}

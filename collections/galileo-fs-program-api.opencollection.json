@@ -1,0 +1,111 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Galileo Financial Technologies Pro Config Program API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Program",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a program account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/program/accounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a program account"
+        },
+        {
+          "info": {
+            "name": "getAccount",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/program/accounts/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "Issue a card (physical, virtual, instant)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/program/cards",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Issue a card (physical, virtual, instant)"
+        },
+        {
+          "info": {
+            "name": "getCard",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/program/cards/get",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "listTransactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/program/transactions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "setAuthorizationControls",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/program/authorization_controls",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

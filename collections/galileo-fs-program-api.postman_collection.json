@@ -1,0 +1,649 @@
+{
+  "item": [
+    {
+      "id": "46b56d5b-bb17-487f-88eb-45acab285fe7",
+      "name": "Program",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fa9366c8-01b6-424c-bd2e-45b8fd5c58f5",
+          "name": "Create a program account",
+          "request": {
+            "name": "Create a program account",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "program",
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f5ed95ce-163a-4ef7-a4c2-a5f447c288bc",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "program",
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2026,\n  \"status\": \"string\",\n  \"processing_time\": 860.5843836503424,\n  \"response_data\": {\n    \"key_0\": 9160.29680379174,\n    \"key_1\": 2069\n  },\n  \"key_0\": false,\n  \"key_1\": 2342.265078852236,\n  \"key_2\": \"string\",\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9f25e299-42fe-47ae-a0f1-9cd8c969aa1c",
+          "name": "get Account",
+          "request": {
+            "name": "get Account",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "program",
+                "accounts",
+                "get"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e4e1203a-9dd7-4d44-a889-eccd4543583c",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "program",
+                    "accounts",
+                    "get"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2026,\n  \"status\": \"string\",\n  \"processing_time\": 860.5843836503424,\n  \"response_data\": {\n    \"key_0\": 9160.29680379174,\n    \"key_1\": 2069\n  },\n  \"key_0\": false,\n  \"key_1\": 2342.265078852236,\n  \"key_2\": \"string\",\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "abf47027-fea9-4b6f-b4cf-62948363c18b",
+          "name": "Issue a card (physical, virtual, instant)",
+          "request": {
+            "name": "Issue a card (physical, virtual, instant)",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "program",
+                "cards"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bbba8232-99a8-4ad0-a3ac-4b75b764e0a1",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "program",
+                    "cards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2026,\n  \"status\": \"string\",\n  \"processing_time\": 860.5843836503424,\n  \"response_data\": {\n    \"key_0\": 9160.29680379174,\n    \"key_1\": 2069\n  },\n  \"key_0\": false,\n  \"key_1\": 2342.265078852236,\n  \"key_2\": \"string\",\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d6cbfa1f-69c8-4da4-a148-3b408628d5bf",
+          "name": "get Card",
+          "request": {
+            "name": "get Card",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "program",
+                "cards",
+                "get"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "835a98e6-508f-4c93-b488-c9c090e5e595",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "program",
+                    "cards",
+                    "get"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2026,\n  \"status\": \"string\",\n  \"processing_time\": 860.5843836503424,\n  \"response_data\": {\n    \"key_0\": 9160.29680379174,\n    \"key_1\": 2069\n  },\n  \"key_0\": false,\n  \"key_1\": 2342.265078852236,\n  \"key_2\": \"string\",\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3246c99a-0a21-4022-b193-5f6cf675167d",
+          "name": "list Transactions",
+          "request": {
+            "name": "list Transactions",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "program",
+                "transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0cf26510-081d-46ca-958b-e82b44d1632c",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "program",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2026,\n  \"status\": \"string\",\n  \"processing_time\": 860.5843836503424,\n  \"response_data\": {\n    \"key_0\": 9160.29680379174,\n    \"key_1\": 2069\n  },\n  \"key_0\": false,\n  \"key_1\": 2342.265078852236,\n  \"key_2\": \"string\",\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "adb2c55b-28df-488f-b693-be9b6b7ddcc2",
+          "name": "set Authorization Controls",
+          "request": {
+            "name": "set Authorization Controls",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "program",
+                "authorization_controls"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0b6b3a0d-b7d7-4860-8bb0-c5e1eb1e72a2",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "program",
+                    "authorization_controls"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 2026,\n  \"status\": \"string\",\n  \"processing_time\": 860.5843836503424,\n  \"response_data\": {\n    \"key_0\": 9160.29680379174,\n    \"key_1\": 2069\n  },\n  \"key_0\": false,\n  \"key_1\": 2342.265078852236,\n  \"key_2\": \"string\",\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-sandbox.cv.gpsrv.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b1bfc652-86e4-4a23-9e9b-53c1976509b0",
+    "name": "Galileo Financial Technologies Pro Config Program API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)\nREST API surface, covering Program (accounts and cards), Config, Dispute 3.0,\nLoan, Payment Hub, Risk, External Transactions, and the Events webhook.\nEndpoint detail is intentionally coarse because Galileo publishes its\noperation-level reference behind reference pages\n(/pro/reference/post_<functionname>); shapes here describe representative\nPOST resources. Generated from public documentation; not an official spec.\n\n\nContact Support:\n Name: Galileo Pro Documentation",
+      "type": "text/plain"
+    }
+  }
+}

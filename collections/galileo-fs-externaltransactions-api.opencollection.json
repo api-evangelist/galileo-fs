@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Galileo Financial Technologies Pro Config ExternalTransactions API",
+    "version": "2026-05-23"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ExternalTransactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a third-party transaction to the program ledger",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-sandbox.cv.gpsrv.com/pro/external-transactions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a third-party transaction to the program ledger"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,145 @@
+{
+  "item": [
+    {
+      "id": "7074b24b-2816-42b9-ac22-c6d05e6e8a65",
+      "name": "Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "72a87b50-31f2-44e8-9f5a-582044538a03",
+          "name": "create Webhook Subscription",
+          "request": {
+            "name": "create Webhook Subscription",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "events",
+                "webhook-subscriptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\",\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": 5810\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "952f573c-d8cf-4b34-b09a-888e025b56c8",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "events",
+                    "webhook-subscriptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 9277,\n  \"status\": \"string\",\n  \"processing_time\": 5993.46455938981,\n  \"response_data\": {\n    \"key_0\": 4971\n  },\n  \"key_0\": 2833.4554808426547,\n  \"key_1\": 189\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-sandbox.cv.gpsrv.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "07fc0dba-c074-4645-8efe-058cfe6431ee",
+    "name": "Galileo Financial Technologies Pro Config Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)\nREST API surface, covering Program (accounts and cards), Config, Dispute 3.0,\nLoan, Payment Hub, Risk, External Transactions, and the Events webhook.\nEndpoint detail is intentionally coarse because Galileo publishes its\noperation-level reference behind reference pages\n(/pro/reference/post_<functionname>); shapes here describe representative\nPOST resources. Generated from public documentation; not an official spec.\n\n\nContact Support:\n Name: Galileo Pro Documentation",
+      "type": "text/plain"
+    }
+  }
+}

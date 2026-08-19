@@ -1,0 +1,143 @@
+{
+  "item": [
+    {
+      "id": "d7a96123-39f4-47d8-8bd3-cff143ee8073",
+      "name": "ExternalTransactions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "56985bb1-e9f5-418e-8b0a-ef237d726ba0",
+          "name": "Submit a third-party transaction to the program ledger",
+          "request": {
+            "name": "Submit a third-party transaction to the program ledger",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "external-transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dc88f05b-5d5c-4279-a53e-3af890480652",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "external-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 395,\n  \"status\": \"string\",\n  \"processing_time\": 1544.8101635567757,\n  \"response_data\": {\n    \"key_0\": \"string\",\n    \"key_1\": 87.62326874232396\n  },\n  \"key_0\": 8946.058569932935,\n  \"key_1\": 4204.516964119337\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-sandbox.cv.gpsrv.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7c5d4fb7-6292-4d91-91d6-95985d4ba44e",
+    "name": "Galileo Financial Technologies Pro Config ExternalTransactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)\nREST API surface, covering Program (accounts and cards), Config, Dispute 3.0,\nLoan, Payment Hub, Risk, External Transactions, and the Events webhook.\nEndpoint detail is intentionally coarse because Galileo publishes its\noperation-level reference behind reference pages\n(/pro/reference/post_<functionname>); shapes here describe representative\nPOST resources. Generated from public documentation; not an official spec.\n\n\nContact Support:\n Name: Galileo Pro Documentation",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "item": [
+    {
+      "id": "2c62660e-9a22-46ce-ab21-14d8e15dc23d",
+      "name": "Loan",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "07936cd2-2bba-4803-ad1d-00f59652b8e2",
+          "name": "create Loan",
+          "request": {
+            "name": "create Loan",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "loan",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2580e26e-efed-4b84-b42c-c16ad0231874",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "loan",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 3361,\n  \"status\": \"string\",\n  \"processing_time\": 3076.282024718592,\n  \"response_data\": {\n    \"key_0\": 5931.992667074794,\n    \"key_1\": 5953,\n    \"key_2\": \"string\"\n  },\n  \"key_0\": \"string\",\n  \"key_1\": 2667\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b168a7bd-e37a-4fb1-bbec-ef0756027dd1",
+          "name": "simulate Loan",
+          "request": {
+            "name": "simulate Loan",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "loan",
+                "simulate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "270a9868-8c2f-45f8-bdd9-e8c68286b2cf",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "loan",
+                    "simulate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 3361,\n  \"status\": \"string\",\n  \"processing_time\": 3076.282024718592,\n  \"response_data\": {\n    \"key_0\": 5931.992667074794,\n    \"key_1\": 5953,\n    \"key_2\": \"string\"\n  },\n  \"key_0\": \"string\",\n  \"key_1\": 2667\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5b787044-65ef-42a8-b22f-7c3b9ca86c0d",
+          "name": "list Loan Installments",
+          "request": {
+            "name": "list Loan Installments",
+            "description": {},
+            "url": {
+              "path": [
+                "pro",
+                "loan",
+                "installments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3de3bd6e-3405-49df-a843-90faa14a4682",
+              "name": "Successful Galileo response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pro",
+                    "loan",
+                    "installments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"providerId\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"transactionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status_code\": 3361,\n  \"status\": \"string\",\n  \"processing_time\": 3076.282024718592,\n  \"response_data\": {\n    \"key_0\": 5931.992667074794,\n    \"key_1\": 5953,\n    \"key_2\": \"string\"\n  },\n  \"key_0\": \"string\",\n  \"key_1\": 2667\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-sandbox.cv.gpsrv.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "09f7e924-0871-45a6-9d08-b17db38ba5fb",
+    "name": "Galileo Financial Technologies Pro Config Loan API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 sketch of the Galileo Financial Technologies (Pro)\nREST API surface, covering Program (accounts and cards), Config, Dispute 3.0,\nLoan, Payment Hub, Risk, External Transactions, and the Events webhook.\nEndpoint detail is intentionally coarse because Galileo publishes its\noperation-level reference behind reference pages\n(/pro/reference/post_<functionname>); shapes here describe representative\nPOST resources. Generated from public documentation; not an official spec.\n\n\nContact Support:\n Name: Galileo Pro Documentation",
+      "type": "text/plain"
+    }
+  }
+}
