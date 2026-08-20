@@ -21,6 +21,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/galileo-fs.png
 tags:
+  - Fintech
+  - Backend-as-a-Service
+  - Card Issuing
+  - Banking
+  - Payments
+  - ACH
+tags_raw:
   - FinTech
   - BaaS
   - Card Issuing
@@ -114,6 +121,9 @@ apis:
   humanURL: https://docs.galileo-ft.com/pro/reference/auth-api
   baseURL: customer-hosted
   tags:
+  - Webhook
+  - Authorization
+  tags_raw:
   - Webhooks
   - Authorization
   properties:
@@ -126,6 +136,8 @@ apis:
   humanURL: https://docs.galileo-ft.com/pro/reference/events-api
   baseURL: https://api-sandbox.cv.gpsrv.com
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: Documentation
@@ -168,6 +180,8 @@ apis:
   humanURL: https://docs.galileo-ft.com/pro/
   baseURL: https://api-sandbox.cv.gpsrv.com
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
