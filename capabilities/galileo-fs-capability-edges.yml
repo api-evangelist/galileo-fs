@@ -1,0 +1,57 @@
+slug: galileo-fs
+provider: Galileo Financial Technologies
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: Loan
+  spec_file: galileo-fs-loan-api-openapi.yml
+  capability_id: BC-1320
+  capability_id_l1: BC-1320
+  capability_name: Credit & Lending Management
+  confidence: 0.85
+  evidence: POST /pro/loan/create createLoan; POST /pro/loan/simulate simulateLoan; POST /pro/loan/installments
+    listLoanInstallments
+  reason: Operations create loans, simulate loan terms and list instalments — clearly credit & lending,
+    spanning both origination and servicing so no single L2 is named.
+- tag: PaymentHub
+  spec_file: galileo-fs-paymenthub-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.8
+  evidence: POST /pro/payment-hub/transfers createTransfer; POST /pro/payment-hub/transfers/cancel cancelTransfer;
+    POST /pro/payment-hub/external-accounts linkExternalAccount
+  reason: Money-movement instruction capture and cancellation with linked external accounts — payment
+    initiation on a banking platform.
+- tag: Dispute
+  spec_file: galileo-fs-dispute-api-openapi.yml
+  capability_id: BC-1340.70
+  capability_id_l1: BC-1340
+  capability_name: Card Transaction Processing Management
+  confidence: 0.72
+  evidence: 'POST /pro/dispute/claims  createDisputeClaim; POST /pro/dispute/claims/withdraw  withdrawDisputeClaim;
+    vendor: "card-issuing and banking platform ... Dispute API 3.0"'
+  reason: Create/get/withdraw dispute claims on a card issuer processor is cardholder dispute and chargeback
+    handling, which sits in Card Transaction Processing Management. Alternative reading as generic complaints
+    management keeps this below 0.8.
+- tag: Program
+  spec_file: galileo-fs-program-api-openapi.yml
+  capability_id: BC-1340.60
+  capability_id_l1: BC-1340
+  capability_name: Card Issuance Management
+  confidence: 0.7
+  evidence: POST /pro/program/cards createCard "Issue a card (physical, virtual, instant)"; POST /pro/program/authorization_controls
+    setAuthorizationControls
+  reason: 'Core issuer-processor surface: account creation plus card issuance and authorisation controls.
+    Card issuance is the clearest named sub-capability, though the tag also covers account creation and
+    transaction listing.'

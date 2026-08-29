@@ -250,6 +250,9 @@ apis:
   - type: OpenAPI
     url: openapi/galileo-fs-risk-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/galileo-fs-capability-edges.yml
+    name: Galileo Financial Technologies Business Capability Map
   - type: AgenticAccess
     url: agentic-access/galileo-fs-agentic-access.yml
   - type: DomainSecurity
