@@ -1,14 +1,7 @@
 {
   "provider": "galileo-fs",
   "sources": [
-    "galileo-fs-config-api-openapi.yml",
-    "galileo-fs-dispute-api-openapi.yml",
-    "galileo-fs-events-api-openapi.yml",
-    "galileo-fs-externaltransactions-api-openapi.yml",
-    "galileo-fs-loan-api-openapi.yml",
-    "galileo-fs-paymenthub-api-openapi.yml",
-    "galileo-fs-program-api-openapi.yml",
-    "galileo-fs-risk-api-openapi.yml"
+    "_original/galileo-fs-openapi.yml"
   ],
   "outputs": [
     "galileo-fs-config-api-openapi.yml",
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "galileo-fs-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "galileo-fs-config-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-dispute-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-externaltransactions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-loan-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-paymenthub-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-program-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "galileo-fs-risk-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
