@@ -76,19 +76,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    GalileoResponse:
-      type: object
-      additionalProperties: true
-      properties:
-        status_code:
-          type: integer
-        status:
-          type: string
-        processing_time:
-          type: number
-        response_data:
-          type: object
-          additionalProperties: true
     GalileoRequest:
       type: object
       description: Galileo Pro form-style request payload. Provider-specific fields apply.
@@ -105,6 +92,19 @@ components:
           type: string
         transactionId:
           type: string
+    GalileoResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        status_code:
+          type: integer
+        status:
+          type: string
+        processing_time:
+          type: number
+        response_data:
+          type: object
+          additionalProperties: true
   responses:
     GalileoOk:
       description: Successful Galileo response

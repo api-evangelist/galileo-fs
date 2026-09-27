@@ -36,14 +36,14 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/galileo-fs.png
 tags:
   - Fintech
-  - Backend-as-a-Service
+  - Banking as a Service
   - Card Issuing
   - Banking
   - Payments
   - ACH
 tags_raw:
   - FinTech
-  - BaaS
+  - Banking as a Service
   - Card Issuing
   - Banking
   - Payments
@@ -122,6 +122,9 @@ apis:
   humanURL: https://docs.galileo-ft.com/pro/reference/risk-api
   baseURL: https://api-sandbox.cv.gpsrv.com
   tags:
+  - REST
+  - Risk Management
+  tags_raw:
   - REST
   - Risk
   properties:
@@ -247,6 +250,8 @@ apis:
   humanURL: https://docs.galileo-ft.com/pro/
   baseURL: https://api-sandbox.cv.gpsrv.com
   tags:
+  - Risk Management
+  tags_raw:
   - Risk
   properties:
   - type: OpenAPI
