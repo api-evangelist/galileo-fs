@@ -42,7 +42,27 @@ paths:
         '200':
           $ref: '#/components/responses/GalileoOk'
 components:
+  responses:
+    GalileoOk:
+      description: Successful Galileo response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GalileoResponse'
   schemas:
+    GalileoResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        status_code:
+          type: integer
+        status:
+          type: string
+        processing_time:
+          type: number
+        response_data:
+          type: object
+          additionalProperties: true
     GalileoRequest:
       type: object
       description: Galileo Pro form-style request payload. Provider-specific fields apply.
@@ -59,26 +79,6 @@ components:
           type: string
         transactionId:
           type: string
-    GalileoResponse:
-      type: object
-      additionalProperties: true
-      properties:
-        status_code:
-          type: integer
-        status:
-          type: string
-        processing_time:
-          type: number
-        response_data:
-          type: object
-          additionalProperties: true
-  responses:
-    GalileoOk:
-      description: Successful Galileo response
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GalileoResponse'
   securitySchemes:
     basicAuth:
       type: http
