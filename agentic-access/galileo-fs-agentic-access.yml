@@ -1,131 +1,34 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/galileo-fs-openapi.yml
+source: openapi/galileo-fs-config-api-openapi.yml, openapi/galileo-fs-dispute-api-openapi.yml,
+  openapi/galileo-fs-events-api-openapi.yml, openapi/galileo-fs-externaltransactions-api-openapi.yml,
+  openapi/galileo-fs-loan-api-openapi.yml, openapi/galileo-fs-paymenthub-api-openapi.yml, openapi/galileo-fs-program-api-openapi.yml,
+  openapi/galileo-fs-risk-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 19
   by_action_class:
-    acting: 19
+    connected: 6
+    acting: 13
   by_consequence:
-    write: 14
-    safety-critical: 1
+    read: 6
+    write: 8
     physical: 4
+    safety-critical: 1
   human_in_the_loop_required: 1
 operations:
-- path: /pro/program/accounts
-  method: post
-  operationId: createAccount
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/program/accounts/get
-  method: post
-  operationId: getAccount
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/program/cards
-  method: post
-  operationId: createCard
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/program/cards/get
-  method: post
-  operationId: getCard
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/program/transactions
-  method: post
-  operationId: listTransactions
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/program/authorization_controls
-  method: post
-  operationId: setAuthorizationControls
-  x-agentic-access:
-    action-class: acting
-    consequence: safety-critical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 120
-      exchange: true
-      purpose-required: true
-      proof-of-possession: true
-    escalation:
-      human-in-the-loop: required
-    audit: required
 - path: /pro/config/product
   method: post
   operationId: getProductConfig
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /pro/dispute/claims
   method: post
   operationId: createDisputeClaim
@@ -146,18 +49,12 @@ operations:
   method: post
   operationId: getDisputeClaim
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /pro/dispute/claims/withdraw
   method: post
   operationId: withdrawDisputeClaim
@@ -170,6 +67,38 @@ operations:
       max-ttl: 300
       exchange: true
       purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /pro/events/webhook-subscriptions
+  method: post
+  operationId: createWebhookSubscription
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /pro/external-transactions
+  method: post
+  operationId: postExternalTransaction
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
     escalation:
       human-in-the-loop: conditional
       triggers:
@@ -212,18 +141,12 @@ operations:
   method: post
   operationId: listLoanInstallments
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /pro/payment-hub/external-accounts
   method: post
   operationId: linkExternalAccount
@@ -278,41 +201,87 @@ operations:
       - abnormal
       - high-value
     audit: required
+- path: /pro/program/accounts
+  method: post
+  operationId: createAccount
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /pro/program/accounts/get
+  method: post
+  operationId: getAccount
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /pro/program/cards
+  method: post
+  operationId: createCard
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /pro/program/cards/get
+  method: post
+  operationId: getCard
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /pro/program/transactions
+  method: post
+  operationId: listTransactions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /pro/program/authorization_controls
+  method: post
+  operationId: setAuthorizationControls
+  x-agentic-access:
+    action-class: acting
+    consequence: safety-critical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 120
+      exchange: true
+      purpose-required: true
+      proof-of-possession: true
+    escalation:
+      human-in-the-loop: required
+    audit: required
 - path: /pro/risk/screen
   method: post
   operationId: screenRisk
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/external-transactions
-  method: post
-  operationId: postExternalTransaction
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /pro/events/webhook-subscriptions
-  method: post
-  operationId: createWebhookSubscription
   x-agentic-access:
     action-class: acting
     consequence: write
