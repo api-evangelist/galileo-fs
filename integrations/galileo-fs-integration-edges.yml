@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/galileo-fs/integrations
+- https://zapier.com/apps/galileo-financial-technologies/integrations
+- https://n8n.io/integrations/galileo-fs/
+- https://composio.dev/toolkits/galileo-fs
+- https://monid.ai/tools/galileo-fs
+checked:
+- https://composio.dev/toolkits/galileo-fs
+- https://monid.ai/tools/galileo-fs
+- https://n8n.io/integrations/galileo-fs/
+- https://zapier.com/apps/galileo-financial-technologies/integrations
+- https://zapier.com/apps/galileo-fs/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
