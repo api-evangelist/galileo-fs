@@ -1,4 +1,4 @@
-# Galileo Financial Technologies (galileo-fs)
+# Galileo Financial Technologies
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,197 +66,136 @@
 
 Galileo Financial Technologies (a SoFi company) is a card-issuing and banking platform powering many fintechs. Provides Program API (accounts, cards), Config API, Dispute API 3.0, Loan API, Payment Hub API, Risk API, Auth API (authorization controller webhook), Events API webhooks, and External Transactions API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/galileo-fs/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/galileo-fs/refs/heads/main/apis.yml)
+**Areas:** Fintech · Banking as a Service · Card Issuing · Banking · Payments · ACH
 
-## Tags
+## Galileo Financial Technologies on APIs.io
 
-- FinTech
-- BaaS
-- Card Issuing
-- Banking
-- Payments
-- ACH
+Everything profiled for Galileo Financial Technologies is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/galileo-fs/](https://apis.io/providers/galileo-fs/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (17)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Galileo Program API](https://apis.io/apis/galileo-fs/program-api/) — REST API for managing accounts and cards: account creation, KYC/CIP verification, balance/funding, card issuance (physical, digital, virtual,…
+- [Galileo Config API](https://apis.io/apis/galileo-fs/config-api/) — REST API for program configuration including card products, fee schedules, MCC controls, and program parameters.
+- [Galileo Dispute API 3.0](https://apis.io/apis/galileo-fs/dispute-api/) — REST API for the dispute lifecycle (chargebacks, representments, network communications).
+- [Galileo Loan API](https://apis.io/apis/galileo-fs/loan-api/) — REST API for credit, lending, BNPL, and secured-credit products including draw, repayment, and balance inquiry.
+- [Galileo Payment Hub API](https://apis.io/apis/galileo-fs/payment-hub-api/) — REST API for ACH, RTP, Bill Pay, and other payments rails.
+- [Galileo Risk API](https://apis.io/apis/galileo-fs/risk-api/) — REST API for risk and fraud screening tools.
+- [Galileo Auth API (Authorization Controller)](https://apis.io/apis/galileo-fs/auth-api/) — Synchronous webhook-style endpoint customers expose for Galileo to call during authorization for approve/decline decisions.
+- [Galileo Events API](https://apis.io/apis/galileo-fs/events-api/) — Outbound webhook delivery for transactions, account events, card events, and other lifecycle events.
+- [Galileo External Transactions API](https://apis.io/apis/galileo-fs/external-transactions-api/) — REST API to feed third-party transactions into Galileo program ledgers for unified reporting.
+- [Galileo Financial Technologies Config API](https://apis.io/apis/galileo-fs/galileo-fs-config-api/) — The Config API from Galileo Financial Technologies — 1 operation(s) for config.
+- [Galileo Financial Technologies Dispute API](https://apis.io/apis/galileo-fs/galileo-fs-dispute-api/) — The Dispute API from Galileo Financial Technologies — 3 operation(s) for dispute.
+- [Galileo Financial Technologies Events API](https://apis.io/apis/galileo-fs/galileo-fs-events-api/) — The Events API from Galileo Financial Technologies — 1 operation(s) for events.
+- [Galileo Financial Technologies ExternalTransactions API](https://apis.io/apis/galileo-fs/galileo-fs-externaltransactions-api/) — The ExternalTransactions API from Galileo Financial Technologies — 1 operation(s) for externaltransactions.
+- [Galileo Financial Technologies Loan API](https://apis.io/apis/galileo-fs/galileo-fs-loan-api/) — The Loan API from Galileo Financial Technologies — 3 operation(s) for loan.
+- [Galileo Financial Technologies PaymentHub API](https://apis.io/apis/galileo-fs/galileo-fs-paymenthub-api/) — The PaymentHub API from Galileo Financial Technologies — 3 operation(s) for paymenthub.
+- [Galileo Financial Technologies Program API](https://apis.io/apis/galileo-fs/galileo-fs-program-api/) — The Program API from Galileo Financial Technologies — 6 operation(s) for program.
+- [Galileo Financial Technologies Risk API](https://apis.io/apis/galileo-fs/galileo-fs-risk-api/) — The Risk API from Galileo Financial Technologies — 1 operation(s) for risk.
 
-## APIs
+### Published properties
 
-### Galileo Program API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API for managing accounts and cards: account creation, KYC/CIP verification, balance/funding, card issuance (physical, digital, virtual, instant-issue), authorization controls.
+#### Agentic access (1)
 
-- **Human URL:** [https://docs.galileo-ft.com/pro/](https://docs.galileo-ft.com/pro/)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Galileo Fs Agentic Access](https://apis.io/agentic-access/galileo-fs/galileo-fs-agentic-access/)
 
-- REST
-- Card Issuing
-- Banking
+#### Collections (9)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://docs.galileo-ft.com/pro/)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Galileo Financial Technologies Pro API](https://apis.io/collections/galileo-fs/open-galileo-fs/)
+- [Galileo Financial Technologies Pro Config API](https://apis.io/collections/galileo-fs/open-galileo-fs-config-api/)
+- [Galileo Financial Technologies Pro Config Dispute API](https://apis.io/collections/galileo-fs/open-galileo-fs-dispute-api/)
+- [Galileo Financial Technologies Pro Config Events API](https://apis.io/collections/galileo-fs/open-galileo-fs-events-api/)
+- [Galileo Financial Technologies Pro Config ExternalTransactions API](https://apis.io/collections/galileo-fs/open-galileo-fs-externaltransactions-api/)
+- [Galileo Financial Technologies Pro Config Loan API](https://apis.io/collections/galileo-fs/open-galileo-fs-loan-api/)
+- [Galileo Financial Technologies Pro Config PaymentHub API](https://apis.io/collections/galileo-fs/open-galileo-fs-paymenthub-api/)
+- [Galileo Financial Technologies Pro Config Program API](https://apis.io/collections/galileo-fs/open-galileo-fs-program-api/)
+- [Galileo Financial Technologies Pro Config Risk API](https://apis.io/collections/galileo-fs/open-galileo-fs-risk-api/)
 
-### Galileo Config API
+#### Security (2)
 
-REST API for program configuration including card products, fee schedules, MCC controls, and program parameters.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/config-api](https://docs.galileo-ft.com/pro/reference/config-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
+- [Galileo Fs Authentication](https://apis.io/security/galileo-fs/galileo-fs-authentication/)
+- [Galileo Fs Domain Security](https://apis.io/security/galileo-fs/galileo-fs-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- REST
-- Configuration
+Published plans, tiers and prices.
 
-#### Properties
+- [Galileo Fs Plans Pricing](https://apis.io/plans/galileo-fs/galileo-fs-plans-pricing/)
 
-- [Documentation](https://docs.galileo-ft.com/pro/reference/config-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-### Galileo Dispute API 3.0
+Published request limits.
 
-REST API for the dispute lifecycle (chargebacks, representments, network communications).
+- [Galileo Fs Rate Limits](https://apis.io/rate-limits/galileo-fs/galileo-fs-rate-limits/)
 
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/dispute-api](https://docs.galileo-ft.com/pro/reference/dispute-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
+#### FinOps (1)
 
-#### Tags
+What the API costs to run, by operation.
 
-- REST
-- Disputes
+- [Galileo Fs Finops](https://apis.io/finops/galileo-fs/galileo-fs-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://docs.galileo-ft.com/pro/reference/dispute-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### Galileo Loan API
-
-REST API for credit, lending, BNPL, and secured-credit products including draw, repayment, and balance inquiry.
-
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/loan-api](https://docs.galileo-ft.com/pro/reference/loan-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
-
-#### Tags
-
-- REST
-- Lending
-
-#### Properties
-
-- [Documentation](https://docs.galileo-ft.com/pro/reference/loan-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Galileo Payment Hub API
-
-REST API for ACH, RTP, Bill Pay, and other payments rails.
-
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/payment-hub-api](https://docs.galileo-ft.com/pro/reference/payment-hub-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
-
-#### Tags
-
-- REST
-- Payments
-- ACH
-
-#### Properties
-
-- [Documentation](https://docs.galileo-ft.com/pro/reference/payment-hub-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Galileo Risk API
-
-REST API for risk and fraud screening tools.
-
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/risk-api](https://docs.galileo-ft.com/pro/reference/risk-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
-
-#### Tags
-
-- REST
-- Risk
-
-#### Properties
-
-- [Documentation](https://docs.galileo-ft.com/pro/reference/risk-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Galileo Auth API (Authorization Controller)
-
-Synchronous webhook-style endpoint customers expose for Galileo to call during authorization for approve/decline decisions.
-
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/auth-api](https://docs.galileo-ft.com/pro/reference/auth-api)
-- **Base URL:** `customer-hosted`
-
-#### Tags
-
-- Webhooks
-- Authorization
-
-#### Properties
-
-- [Documentation](https://docs.galileo-ft.com/pro/reference/auth-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Galileo Events API
-
-Outbound webhook delivery for transactions, account events, card events, and other lifecycle events.
-
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/events-api](https://docs.galileo-ft.com/pro/reference/events-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
-
-#### Tags
-
-- Webhooks
-
-#### Properties
-
-- [Documentation](https://docs.galileo-ft.com/pro/reference/events-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Galileo External Transactions API
-
-REST API to feed third-party transactions into Galileo program ledgers for unified reporting.
-
-- **Human URL:** [https://docs.galileo-ft.com/pro/reference/external-transactions-api](https://docs.galileo-ft.com/pro/reference/external-transactions-api)
-- **Base URL:** `https://api-sandbox.cv.gpsrv.com`
-
-#### Tags
-
-- REST
-- External
-
-#### Properties
-
-- [Documentation](https://docs.galileo-ft.com/pro/reference/external-transactions-api)
-- [Postman Collection](collections/galileo-fs.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/galileo-fs.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/galileo-financial-technologies)
 - [Website](https://www.galileo-ft.com/)
-- [Plans](plans/galileo-fs-plans-pricing.yml)
-- [Rate Limits](rate-limits/galileo-fs-rate-limits.yml)
-- [Fin Ops](finops/galileo-fs-finops.yml)
-- [L L Ms Txt](https://docs.galileo-ft.com/llms.txt)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 21.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 5.3 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.7** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/galileo-fs/](https://apis.io/providers/galileo-fs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Galileo Financial Technologies: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/galileo-fs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
